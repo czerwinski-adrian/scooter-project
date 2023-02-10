@@ -2,10 +2,14 @@ const Scooter = require('../src/Scooter')
 const User = require('../src/User')
 
 //typeof scooter === object
-describe('scooter object', () => {
-  test('does something', () => {
+describe('scooter integrity checks', () => {
+  test('scooter has correct properties', () => {
     // edit this to be a real test!
-    expect(false).toEqual(true);
+    expect(Scooter.station).toBe('Manchester', null)
+    expect(Scooter).toHaveProperty('user', null);
+    expect(Scooter).toHaveProperty('serial');
+    expect(Scooter).toHaveProperty('charge');
+    expect(typeof Scooter.isBroken).toEqual('boolean');
   }
 )
 })
