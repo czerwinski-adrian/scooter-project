@@ -9,6 +9,33 @@ class Scooter{
     this.charge = 100;
     this.isBroken = false;
   }
+// rent method
+  rent(){
+    if (this.charge > 20 && !this.isBroken){
+      this.user = config.user;
+      this.station = null; 
+    }else if(this.charge <= 20){
+      throw new Error('scooter needs to charge');
+    }else if(this.isBroken = true){
+      throw new Error('scooter needs repair')
+    }
+  }
+// dock method
+  dock(station){
+    if(this.user = null){
+      return this.station = config.station;
+    }
+  }
+// recharge method
+  recharge(){
+
+  }
+
+// repair method
+  repair(){
+    
+  }
+
 }
 
 
