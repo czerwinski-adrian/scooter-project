@@ -15,9 +15,9 @@ class Scooter{
       this.user = config.user;
       this.station = null; 
     }else if(this.charge <= 20){
-      throw new Error('scooter needs to charge');
+      throw new Error('Scooter needs to charge');
     }else if(this.isBroken = true){
-      throw new Error('scooter needs repair')
+      throw new Error('Scooter needs repair');
     }
   }
 // dock method
@@ -27,16 +27,20 @@ class Scooter{
     }
   }
 // recharge method
-  recharge(){
-
-  }
+async charge(){
+  console.log('Starting charge');
+  await new Promise(resolve => setTimeout(resolve, 2000)); // wait 2 seconds
+  this.charge = 100
+  console.log('Charge complete');   
+}
 
 // repair method
   repair(){
-    
+    if(this.isBroken = true){
+      await new Promise(resolve => setTimeout(resolve));
+    this.isBroken = false;
+    console.log('Repair completed');
   }
-
 }
 
-
-module.exports = Scooter;
+module.exports = Scooter

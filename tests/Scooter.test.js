@@ -26,16 +26,20 @@ describe('scooter methods', () => {
     expect(scooter.charge).toBeGraterThan(20);
     expect(typeof scooter.isBroken).toBe(false);
     expect(scooter.user).toBe('user');
-  })
+  });
   //dock method
   test('dock scooter', () => {
     expect(scooter.station).toBe('new station')
     expect(scooter.user).toBe(null);
-  })
+  });
   //requestRepair method
+  test('repair scooter', async () => {
+    expect(this.isBroken).toBe(false);
+  });
 
   //charge method
-  test('charge scooter', () => {
-    expect(scooter.charge).toBe(100);
-  })
+  test("charge", async () => {
+    await scooter.charge(); // we need to wait for the charge!
+    expect(newScooter.charge).toBe(100);
+  });
 })
