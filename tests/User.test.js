@@ -10,9 +10,9 @@ describe('user class integrity checks', () => {
 
     let user = new User({username: 'user', password: 'password', age: 24});
 
-        expect(user.username).toBe('user');
-        expect(user.password).toBe('password');
-        expect(user.age).toBe('age');
+        expect(user.username).toHaveProperty('user');
+        expect(user.password).toHaveProperty('password');
+        expect(user.age).toHaveProperty('age');
         expect(typeof user.loggedIn).toBe('boolean');
     }
     )

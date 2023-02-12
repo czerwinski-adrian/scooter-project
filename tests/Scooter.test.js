@@ -19,7 +19,7 @@ describe('scooter class integrity checks', () => {
 //Method tests
 describe('scooter methods', () => {
   // tests here!
-  const scooter = new Scooter();
+  let scooter = new Scooter();
   //rent method
   test('rent scooter', () => {
     expect(scooter.station).toBe(null);
