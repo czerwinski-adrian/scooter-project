@@ -5,7 +5,7 @@ class Scooter{
   constructor(config){
     this.station = config.station;
     this.user = config.user;
-    this.serial = Scooter.nextSerial++;
+    this.serial = config.Scooter.nextSerial++;
     this.charge = 100;
     this.isBroken = false;
   }
@@ -35,12 +35,13 @@ async charge(){
 }
 
 // repair method
-  repair(){
+  async repair(){
     if(this.isBroken = true){
       await new Promise(resolve => setTimeout(resolve));
     this.isBroken = false;
     console.log('Repair completed');
   }
 }
+}
 
-module.exports = Scooter
+module.exports = Scooter;

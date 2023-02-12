@@ -1,4 +1,4 @@
-const Scooter = require('../src/Scooter')
+const Scooter = require('../src/Scooter').default
 const User = require('../src/User')
 const ScooterApp = require('../src/ScooterApp')
 

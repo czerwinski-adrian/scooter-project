@@ -1,4 +1,4 @@
-const Scooter = require('../src/Scooter')
+const Scooter = require('../src/Scooter').default
 const User = require('../src/User')
 
 //typeof scooter === object
@@ -19,7 +19,7 @@ describe('scooter class integrity checks', () => {
 //Method tests
 describe('scooter methods', () => {
   // tests here!
-  let scooter = new Scooter();
+  const scooter = new Scooter();
   //rent method
   test('rent scooter', () => {
     expect(scooter.station).toBe(null);
