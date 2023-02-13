@@ -3,6 +3,7 @@ const Scooter = require('./Scooter').default
 
 class ScooterApp {
   // ScooterApp code here
+  constructor()
 }
 
 module.exports = ScooterApp

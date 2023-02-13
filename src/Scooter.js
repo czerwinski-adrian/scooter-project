@@ -2,10 +2,10 @@ class Scooter{
   // scooter code here
   static nextSerial = 1;
 
-  constructor(config){
-    this.station = config.station;
-    this.user = config.user;
-    this.serial = config.Scooter.nextSerial++;
+  constructor(station){
+    this.station = station;
+    this.user = user;
+    this.serial = Scooter.nextSerial++;
     this.charge = 100;
     this.isBroken = false;
   }
@@ -23,7 +23,7 @@ class Scooter{
 // dock method
   dock(station){
     if(this.user = null){
-      return this.station = config.station;
+      return this.station = station;
     }
   }
 // recharge method

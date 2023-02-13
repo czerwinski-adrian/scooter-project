@@ -1,9 +1,9 @@
 class User {
   // User code here
-  constructor(config){
-    this.username = config.username;
-    this.password = config.password;
-    this.age = config.age;
+  constructor(username, password, age){
+    this.username = username;
+    this.password = password;
+    this.age = age;
     this.loggedIn = false;
   }
 

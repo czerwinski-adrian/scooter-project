@@ -19,13 +19,14 @@ describe('scooter class integrity checks', () => {
 //Method tests
 describe('scooter methods', () => {
   // tests here!
-  let scooter = new Scooter();
+  const scooter1 = new Scooter(station1);
+  const station1 = "Crewe";
   //rent method
   test('rent scooter', () => {
-    expect(scooter.station).toBe(null);
-    expect(scooter.charge).toBeGraterThan(20);
-    expect(typeof scooter.isBroken).toBe(false);
-    expect(scooter.user).toBe('user');
+    expect(scooter1.station).toBe(null);
+    expect(scooter1.charge).toBeGraterThan(20);
+    expect(typeof scooter1.isBroken).toBe(false);
+    expect(scooter1.user).toBe('user');
   });
   //dock method
   test('dock scooter', () => {

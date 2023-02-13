@@ -8,7 +8,7 @@ const User = require('../src/User')
 describe('user class integrity checks', () => {
     test('user class has correct properties', () =>{
 
-    let user = new User({username: 'user', password: 'password', age: 24});
+    const user = new User({username: 'user', password: 'password', age: 24});
 
         expect(user.username).toHaveProperty('user');
         expect(user.password).toHaveProperty('password');
@@ -21,9 +21,11 @@ describe('user class integrity checks', () => {
 // Method tests 
 // test login
 test('login user', () =>{
-    expect(user.password).toBe('password');
+    const user1 = new User();
+    expect(user1.password).toBe('password');
 })
 // test logout
 test('logout user', () =>{
-    expect(typeof user.loggedIn).toBe(false);
+    const user2 = new User();
+    expect(typeof user2.loggedIn).toBe(false);
 })
